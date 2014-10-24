@@ -1,8 +1,8 @@
 # Gestpay
 
-[![Build Status](https://travis-ci.org/momitians/gestpay.png?branch=master)](https://travis-ci.org/momitians/gestpay)
-[![Dependency Status](https://gemnasium.com/momitians/gestpay.png)](https://gemnasium.com/momitians/gestpay)
-[![Code Climate](https://codeclimate.com/github/momitians/gestpay.png)](https://codeclimate.com/github/momitians/gestpay)
+[![Build Status](https://travis-ci.org/marzapower/gestpay.png?branch=master)](https://travis-ci.org/marzapower/gestpay)
+[![Dependency Status](https://gemnasium.com/marzapower/gestpay.png)](https://gemnasium.com/marzapower/gestpay)
+[![Code Climate](https://codeclimate.com/github/dSmart-srl/gestpay.png)](https://codeclimate.com/github/dSmart-srl/gestpay)
 
 Service wrapper for BancaSella Gestpay interface.
 
