@@ -2,16 +2,33 @@ module Gestpay
   class Configuration
 
     CURRENCY_MAPPING = {
-      'EUR' => '242',
-      'ITL' => '18',
-      'BRL' => '234',
       'USD' => '1',
+      'GBP' => '2',
+      'CHF' => '3',
+      'DKK' => '7',
+      'NOK' => '8',
+      'SEK' => '9',
+      'CAD' => '12',
+      'ITL' => '18',
       'JPY' => '71',
-      'HKD' => '103'
+      'HKD' => '103',
+      'BRL' => '234',
+      'EUR' => '242'
     }
 
     LANGUAGE_MAPPING = {
-      'ITA' => '1'
+      'ITA' => '1',
+      'ENG' => '2',
+      'SPA' => '3',
+      'FRA' => '4',
+      'FRE' => '4',
+      'DEU' => '5',
+      'GER' => '5',
+      'IT' => '1',
+      'EN' => '2',
+      'ES' => '3',
+      'FR' => '4',
+      'DE' => '5'
     }
 
     attr_accessor :environment, :account, :currency, :language, :proxy
@@ -24,11 +41,11 @@ module Gestpay
     end
 
     def currency_code
-      CURRENCY_MAPPING[@currency]
+      CURRENCY_MAPPING[@currency.upcase]
     end
 
     def language_code
-      LANGUAGE_MAPPING[@language]
+      LANGUAGE_MAPPING[@language.upcase]
     end
 
   end
