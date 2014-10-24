@@ -16,7 +16,7 @@ module Gestpay
     def initialize
       # SOAP Client operations:
       # => [:call_refund_s2_s, :call_read_trx_s2_s, :call_pagam_s2_s, :call_delete_s2_s, :call_settle_s2_s, :call_verifycard_s2_s, :call_check_carta_s2_s, :call_renounce, :call_request_token_s2_s, :call_delete_token_s2_s]
-      savon_options = {:wsdl => URL[Gestpay.config.environment]}
+      savon_options = Gestpay.config.savon_options.merge({:wsdl => URL[Gestpay.config.environment]})
       if Gestpay.config.proxy
         savon_options.merge!({ :proxy=> URI.parse(Gestpay.config.proxy)})
       end

@@ -31,13 +31,14 @@ module Gestpay
       'DE' => '5'
     }
 
-    attr_accessor :environment, :account, :currency, :language, :proxy
+    attr_accessor :environment, :account, :currency, :language, :proxy, :savon_options
     def initialize
-      @environment = ENV['GESTPAY_ENVIRONMENT'] || :test
-      @account     = ENV['GESTPAY_ACCOUNT']
-      @currency    = 'EUR'
-      @language    = 'ITA'
-      @proxy       = ENV['GESTPAY_PROXY']
+      @environment    = ENV['GESTPAY_ENVIRONMENT'] || :test
+      @account        = ENV['GESTPAY_ACCOUNT']
+      @currency       = 'EUR'
+      @language       = 'ITA'
+      @proxy          = ENV['GESTPAY_PROXY']
+      @savon_options  = Hash.new
     end
 
     def currency_code
